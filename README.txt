@@ -23,3 +23,9 @@ de parameters voor het convolutionele neurale netwerk gezet worden. De parameter
 moet gelijk zijn aan het aantal klassen dat is aangemaakt in fillData.py. Als een oud model 
 ingeladen moet worden zet dan 'use_saved_model' op 'True'. In de functie 'train_neural_network'
 wordt het model opgehaald en/of opgeslagen, gebruik hierbij de juiste path in 'saver.save(...)'.
+
+
+model:
+Hierin staan al wat getrainde modellen opgeslagen. De parameters gebruikt staan in de titel.
+Lees de titel als volgt: eerste nummer is de batch size, tweede nummer is het procentueel 
+aantal dropout en daarachter staat op welke laag de dropout is toegevoegd.
