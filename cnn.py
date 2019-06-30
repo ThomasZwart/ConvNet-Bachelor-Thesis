@@ -12,7 +12,7 @@ np.random.shuffle(data)
 
 # Splits de data op in train en validatie data (test data in test fase)
 train_data = data[:800000]
-test_data = data[:820000]
+test_data = data[800000:820000]
 
 # Maak test data
 test_x, test_y = [], []
@@ -80,7 +80,7 @@ def maxpool2d(x):
 
 # Maakt het neurale netwerk
 def convolutional_neural_network(x):
-    # CNN krijgt een 28 bij 28 foto, er gaat een 5 bij 5 filter over de foto die random geïnitialiseerd is
+    # CNN krijgt een 28 bij 28 foto, er gaat een 5 bij 5 filter over de foto die random geÃ¯nitialiseerd is
     
             # 5 bij 5 convolutie, 1 input (the picture), 32 features/outputs
     weights = {'W_conv1':tf.Variable(tf.random_normal([5,5,1,32])),
