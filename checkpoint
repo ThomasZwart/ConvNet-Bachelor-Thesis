@@ -1,2 +1,0 @@
-model_checkpoint_path: "batch_size_256_dropout_05_conv1.ckpt"
-all_model_checkpoint_paths: "batch_size_256_dropout_05_conv1.ckpt"
