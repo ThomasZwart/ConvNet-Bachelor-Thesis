@@ -11,7 +11,8 @@ np.random.shuffle(data)
 
 # Splits de data op in train en validatie data (test data in test fase)
 train_data = data[:800000]
-test_data = data[800000:820000]
+# test_data = data[800000:820000] # voor training
+test_data = data[:820000]
 
 # Maak test data
 test_x, test_y = [], []
@@ -85,7 +86,7 @@ def convolutional_neural_network(x):
     weights = {'W_conv1':tf.Variable(tf.random_normal([5,5,1,32])),
                # 5 bij 5 convolutie, 32 inputs (previous layer), 64 outputs
                'W_conv2':tf.Variable(tf.random_normal([5,5,32,64])),
-               # Een 7 bij 7 foto, want we hebben 2x gepooled met stride 2, dat geeft ons 28/2/2 = 
+               # Een 7 bij 7 foto, want we hebben 2x gepooled met stride 2, dat geeft ons 28/2/2 = 7
                # Dus de volledig verbonden laag (fc) krijgt 64 geconvoleerde foto's van 7 bij 7 pixels
                'W_fc':tf.Variable(tf.random_normal([7*7*64,1024])),
                'out':tf.Variable(tf.random_normal([1024, n_classes]))}
@@ -136,7 +137,7 @@ def train_neural_network(x):
                 # Shuffle data na elke epoch, zodat de (nieuwe) batches in een andere volgorde door het netwerk gaan
                 train_data.shuffle()
                 start = time.time()
-                # Elke iteratie is 1x de batch size, wanneer deze klaar is, zijn alle datapunten door het netwerk gesepareerd in batches
+                # Elke iteratie is 1x de batch size, wanneer deze klaar is, zijn alle datapunten door het netwerk gesepareerd door batches
                 for _ in range(int(train_data.length/batch_size)):
                     # Training data en labels
                     epoch_x, epoch_y = train_data.next_batch(batch_size)

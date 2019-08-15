@@ -4,6 +4,7 @@ import numpy as np
 x = 0 
 n_classes = 21
 data_dir = './data/'
+# Het aantal datapunten per categorie/klasse
 data_limit_per_label = 20000
 data = None
 # De 20 klassen (gebruikt voor het maken van one-hot labels)
@@ -22,6 +23,7 @@ for file_name in listdir(data_dir):
   index = labels.index(str(label))
   labelarray = np.zeros(n_classes)
   labelarray[index] = 1
+  
   labeleddata = None
 
   # Voeg label toe aan foto data
@@ -45,6 +47,7 @@ for file_name in listdir('./nulldata/'):
   np.random.shuffle(data_t)
   # Aantal data per klasse delen door 30
   data_t = data_t[:(int)(data_limit_per_label/30)]
+  # One-hot label
   labelarray = np.zeros(n_classes)
   labelarray[n_classes - 1] = 1
   labeleddata = None;
@@ -64,5 +67,4 @@ for file_name in listdir('./nulldata/'):
 data = np.concatenate((data, null_data)) 
 
 print("saving...")
-np.save("testdata", data)
-print(data.shape)
+np.save("traindata", data)
