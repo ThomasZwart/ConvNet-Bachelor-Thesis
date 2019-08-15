@@ -10,7 +10,7 @@ gedownload in de 'data' folder. De variabele 'n_classes' moet gelijk zijn aan he
 klassen dat je hebt gedownload in de 'data' folder en als je een 'null-klasse' gebruikt
 telt dit ook als extra klasse. Run deze code om een .npy bestand te krijgen waarop het model
 getraind kan worden.
-Waarschuwing: Deze code kost veel werkgeheugen.
+###### Waarschuwing: Deze code kost veel werkgeheugen.
 
 
 #### Model Trainen cnn.py
@@ -21,9 +21,7 @@ Zet de parameters ook naar eigen wens, 'n_classes' moet gelijk zijn aan het aant
 waarop je traint en 'use_saved_model' moet 'False' zijn. Het model wordt op de 10 epochs
 opgeslagen in een .ckpt bestand, de naam hiervan kan zelf ingevuld worden, dit is te vinden
 in de laatste functie 'train_neural_network'. 
-Waarschuwing: Het trainen van een neuraal netwerk op de CPU is niet efficiënt en duurt erg lang. 
-Om te trainen op de GPU is tensorflow-gpu nodig, raadpleeg deze link voor meer informatie:
-https://www.tensorflow.org/install/gpu
+###### Waarschuwing: Het trainen van een neuraal netwerk op de CPU is niet efficiënt en duurt erg lang. Om te trainen op de GPU is tensorflow-gpu nodig, raadpleeg deze link voor meer informatie: https://www.tensorflow.org/install/gpu
 
 
 
