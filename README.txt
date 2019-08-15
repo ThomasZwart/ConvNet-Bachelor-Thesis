@@ -1,3 +1,16 @@
+## Een model trainen
+#### Data voorbereiden:
+Maak eerst in dezelfde map als deze repository twee folders genaamd 'data' en 'nulldata'. 
+Download vervolgens de klassen waarop je wilt trainen van de volgende link 
+'https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap/?pli=1'
+en zet ze in de 'data' folder. Mocht je een 'null-klasse' ter controle willen download
+dan ook nog andere klassen en zet ze in de 'nulldata' folder. Geef vervolgens in
+fillData.py aan hoeveel data je per klasse wilt gebruiken met de variabele 'data_limit_per_label'
+en vul de array 'labels' met string die corresponderen met de klassen die je hebt 
+gedownload in de 'data' folder. De variabele 'n_classes' moet gelijk zijn aan het aantal
+klassen dat je hebt gedownload in de 'data' folder en als je een 'null-klasse' gebruikt
+telt dit ook als klasse. 
+
 fillData.py:
 De data wordt hier gelabeled en gemaakt zodat het neurale netwerk er gebruik van kan maken.
 De labels die in de code staan zijn corresponderend met de titel die Google de numpy data heeft
