@@ -60,7 +60,7 @@ index_epoch = 0
 # daarna kan altijd nog verder worden getrained aangezien het model wordt opgeslagen
 hm_epochs = 300
 # Tegen overfitting, dropout = 1 - keep_rate
-keep_rate_conv1 = 0.95
+keep_rate_conv1 = 1
 
 
 x = tf.placeholder('float', [None, 784])
@@ -160,7 +160,7 @@ def train_neural_network(x):
 
         # Evalueer een oud model
         else:
-            saver.restore(sess, "./model/batch_size_256_dropout_05_conv1.ckpt")
+            saver.restore(sess, "./model/batch_size_256_dropout_00.ckpt")
             correct = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
             accuracy = tf.reduce_mean(tf.cast(correct, 'float'))
             print('Accuracy:', accuracy.eval({x:test_x, y:test_y}))
