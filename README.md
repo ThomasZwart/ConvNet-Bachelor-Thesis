@@ -15,7 +15,7 @@ Waarschuwing: Deze code kost veel werkgeheugen.
 
 #### Model Trainen cnn.py
 Als je de data hebt voorbereid kan je met cnn.py het model trainen. Laad het .npy data bestand
-in. Doe dit door de naam van het bestand in te voeren bij de variabele 'data' bovenin cnn.py
+in. Doe dit door de naam van het bestand in te voeren bij de variabele 'data' bovenin cnn.py. 
 Splits vervolgens de data op naar wens met de variabelen 'train_data' en 'test_data'.
 Zet de parameters ook naar eigen wens, 'n_classes' moet gelijk zijn aan het aantal klassen
 waarop je traint en 'use_saved_model' moet 'False' zijn. Het model wordt op de 10 epochs
@@ -27,17 +27,3 @@ https://www.tensorflow.org/install/gpu
 
 
 
-
-cnn.py:
-Er wordt data opgehaald in een numpy array. De data die wordt opgehaald is gemaakt in fillData.py.
-Vervolgens kan de data opgesplitst worden in trainingsdata en validatiedata, daarnaast kunnen ook
-de parameters voor het convolutionele neurale netwerk gezet worden. De parameter 'n_classes' 
-moet gelijk zijn aan het aantal klassen dat is aangemaakt in fillData.py. Als een oud model 
-ingeladen moet worden zet dan 'use_saved_model' op 'True'. In de functie 'train_neural_network'
-wordt het model opgehaald en/of opgeslagen, gebruik hierbij de juiste path in 'saver.save(...)'.
-
-
-model:
-Hierin staan al wat getrainde modellen opgeslagen. De parameters gebruikt staan in de titel.
-Lees de titel als volgt: eerste nummer is de batch size, tweede nummer is het procentueel 
-aantal dropout en daarachter staat op welke laag de dropout is toegevoegd.
