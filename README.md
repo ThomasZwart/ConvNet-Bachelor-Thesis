@@ -2,7 +2,7 @@
 #### Data voorbereiden fillData.py
 Maak eerst in dezelfde map als deze repository twee folders genaamd 'data' en 'nulldata'. 
 Download vervolgens de klassen waarop je wilt trainen van de volgende link https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap/?pli=1
-en zet ze in de 'data' folder. Mocht je een 'null-klasse' ter controle willen download
+en zet ze in de 'data' folder. Mocht je een 'null-klasse' ter controle willen, download
 dan ook nog andere klassen en zet ze in de 'nulldata' folder. Geef vervolgens in
 fillData.py aan hoeveel data je per klasse wilt gebruiken met de variabele 'data_limit_per_label'
 en vul de array 'labels' met strings die corresponderen met de klassen die je hebt 
