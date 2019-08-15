@@ -17,7 +17,7 @@ getraind kan worden.
 Als je de data hebt voorbereid kan je met cnn.py het model trainen. Laad het .npy data bestand
 in. Doe dit door de naam van het bestand in te voeren bij de variabele 'data' bovenin cnn.py. 
 Splits vervolgens de data op naar wens met de variabelen 'train_data' en 'test_data'.
-Zet de parameters ook naar eigen wens, 'n_classes' moet gelijk zijn aan het aantal klassen
+Zet de parameters van het neurale netwerk ook naar eigen wens, 'n_classes' moet gelijk zijn aan het aantal klassen
 waarop je traint en 'use_saved_model' moet 'False' zijn. Het model wordt op de 10 epochs
 opgeslagen in een .ckpt bestand, de naam hiervan kan zelf ingevuld worden, dit is te vinden
 in de laatste functie 'train_neural_network'. 
